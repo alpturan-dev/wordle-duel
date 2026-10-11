@@ -1,0 +1,27 @@
+# Local development services for Wordle Duel.
+# Start:  docker compose up -d
+# Stop:   docker compose down        (data is kept)
+# Reset:  docker compose down -v     (deletes the database volume)
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: wordle-duel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: wordleduel
+      POSTGRES_USER: wordleduel
+      POSTGRES_PASSWORD: wordleduel   # local dev only, never reuse elsewhere
+      TZ: UTC
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wordleduel -d wordleduel"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgres-data:

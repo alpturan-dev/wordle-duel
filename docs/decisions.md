@@ -12,6 +12,7 @@
 - Turkish letter pairs (I/İ, C/Ç, G/Ğ, O/Ö, S/Ş, U/Ü) are distinct letters.
 - Only root dictionary forms are valid words.
 - Guests with nicknames; no accounts yet.
+- TypeScript or plain JavaScript on the frontend. We will use TypeScript (11.10.2026)
 
 ## Open (decide and move to "Decided" with a date)
 
@@ -19,7 +20,7 @@
 - Round time limit: none, fixed (e.g. 5 min), or inactivity-based?
 - Reconnect grace period length (suggested 30 s).
 - Idle room expiry (suggested 30 min).
-- TypeScript or plain JavaScript on the frontend.
+-
 - Match concurrency: lock per match vs single-threaded executor per match.
 - Circumflexes: strip them (current assumption) or reject such words?
 - Turkish word list source + licence (e.g. Hunspell tr, Zemberek lexicon,
