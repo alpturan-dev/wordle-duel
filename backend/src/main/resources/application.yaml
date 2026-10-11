@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: wordleduel
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wordleduel
+    username: wordleduel
+    password: wordleduel

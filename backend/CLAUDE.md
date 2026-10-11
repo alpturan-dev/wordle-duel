@@ -2,7 +2,11 @@
 
 Read the root CLAUDE.md first; mentor mode applies here too.
 
-- Java 21. Use records for DTOs and messages.
+- Java 25, Spring Boot 4. Use records for DTOs and messages.
+- Boot 4 notes: web starter is `spring-boot-starter-webmvc`; Jackson 3 lives in
+  `tools.jackson.*` (not `com.fasterxml.jackson.*`); use `@MockitoBean`, not
+  `@MockBean`; nullness annotations come from JSpecify (`org.jspecify`).
+  Prefer Boot 4 docs over older Boot 3 tutorials when they disagree.
 - Keep `match` and `word` packages free of Spring web/WebSocket types so
   they can be unit tested without a Spring context.
 - GuessEvaluator must have tests for every case in docs/game-spec.md before

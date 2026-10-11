@@ -2,7 +2,7 @@
 
 ## Stack
 
-- Backend: Java 21, Spring Boot 3, Spring WebSocket with STOMP, Maven
+- Backend: Java 25, Spring Boot 4 (Spring Framework 7, Jackson 3), Spring WebSocket with STOMP, Maven
 - Frontend: React + Vite (see decisions.md re TypeScript), @stomp/stompjs
 - Database: PostgreSQL (match history later; not needed for live games)
 - Local dev: Docker Compose for PostgreSQL
